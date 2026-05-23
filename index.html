@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO — Agentic-first content factory para múltiples marcas</title>
+<meta name="description" content="LEO es el primer generador de contenidos que combina agentic-first generation, proceso humano-céntrico y aislamiento multi-brand riguroso. Un producto 498A × ZOOPA.">
+<meta property="og:title" content="LEO — Agentic-first content factory">
+<meta property="og:description" content="Agentic-first. World Wide friendly. Un producto 498A × ZOOPA.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hepta+Slab:wght@400;500;700;800&family=Roboto:wght@300;400;500;700&family=Dela+Gothic+One&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf7;
+  --bg-soft: #f3f1ea;
+  --bg-card: #ffffff;
+  --ink: #1a1a1a;
+  --ink-muted: #5e5e5e;
+  --ink-faint: #9c9b94;
+  --lime: #5a9a14;
+  --lime-deep: #3d6b0e;
+  --lime-bg: #f0f7e1;
+  --green-deep: #1f3d28;
+  --gold: #b8951f;
+  --warm: #a86b2c;
+  --rule: #e2dfd5;
+  --rule-strong: #c8c4b5;
+  --danger: #c0392b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Hepta Slab', Georgia, serif;
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 1200px 600px at 50% -200px, rgba(90, 154, 20, 0.05), transparent 70%),
+    var(--bg);
+  min-height: 100vh;
+  padding: 48px 24px 80px;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* === HEADER === */
+.brand-mark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: var(--lime);
+  margin-bottom: 12px;
+}
+.brand-mark::before {
+  content: "▸ ";
+  color: var(--lime-deep);
+}
+
+h1.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(96px, 14vw, 180px);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.logo .leo {
+  background: linear-gradient(180deg, var(--ink) 0%, var(--lime) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  margin-bottom: 32px;
+}
+
+.tagline em {
+  color: var(--lime);
+  font-style: normal;
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--lime);
+  padding: 28px 32px;
+  margin-bottom: 56px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: -1px; right: -1px;
+  width: 16px; height: 16px;
+  border-top: 2px solid var(--lime);
+  border-right: 2px solid var(--lime);
+}
+.hero-card::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; left: -1px;
+  width: 16px; height: 16px;
+  border-bottom: 2px solid var(--lime);
+  border-left: 2px solid var(--lime);
+}
+
+.hero-card .label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--lime-deep);
+  margin-bottom: 14px;
+}
+
+.hero-card p {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.hero-card strong {
+  color: var(--lime-deep);
+  font-weight: 700;
+}
+
+/* === SECTION === */
+.section {
+  margin-bottom: 56px;
+}
+
+.section-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  color: var(--lime);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.section-label::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--lime);
+}
+
+.section-label .num {
+  color: var(--ink-faint);
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+  color: var(--ink);
+}
+
+h2 .accent {
+  color: var(--lime);
+}
+
+/* === WORKFLOW === */
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  position: relative;
+}
+
+.act {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 20px 16px 18px;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.act:hover {
+  border-color: var(--lime);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 154, 20, 0.1);
+}
+
+.act .roman {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--lime-deep);
+}
+
+.act .icon {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.act .name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 19px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.05;
+}
+
+.act .desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-muted);
+}
+
+.act .arrow {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lime);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  z-index: 2;
+  background: var(--bg);
+  padding: 2px 4px;
+}
+
+.act:last-child .arrow { display: none; }
+
+.workflow-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* === USPS === */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.usp {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 22px 18px;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.usp .num {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 36px;
+  color: var(--lime);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.05em;
+}
+
+.usp .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.usp .body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.usp .body em {
+  color: var(--lime-deep);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* === KEY ELEMENTS === */
+.elements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.element {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--lime-deep);
+  padding: 20px 22px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.element .icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.element .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.element .body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.element .body code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--lime-bg);
+  color: var(--lime-deep);
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 11px;
+}
+
+/* === BENEFITS === */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.benefit {
+  position: relative;
+  padding-top: 24px;
+}
+
+.benefit::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--lime);
+  margin-bottom: 18px;
+}
+
+.benefit .audience {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--lime);
+  margin-bottom: 10px;
+}
+
+.benefit .punch {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.benefit .body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.benefit .body strong {
+  color: var(--warm);
+  font-weight: 500;
+}
+
+/* === COMPETITORS TABLE === */
+.comp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.comp-table th {
+  background: var(--lime-bg);
+  color: var(--lime-deep);
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.comp-table th:first-child { width: 24%; }
+
+.comp-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.comp-table tr:last-child td { border-bottom: none; }
+
+.comp-table tr.leo {
+  background: var(--lime-bg);
+}
+
+.comp-table tr.leo td:first-child {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: var(--lime-deep);
+}
+
+.tick {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: var(--lime);
+  color: var(--bg-card);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.cross {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: var(--ink-faint);
+  color: var(--bg-card);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.partial {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: var(--warm);
+  color: var(--bg-card);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.adv {
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* === MANIFESTO BLOCK === */
+.manifesto {
+  background: linear-gradient(135deg, var(--green-deep) 0%, #0d2218 100%);
+  padding: 56px 48px;
+  margin: 64px 0;
+  position: relative;
+  text-align: center;
+  border: 1px solid var(--green-deep);
+}
+
+.manifesto::before,
+.manifesto::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.manifesto::before {
+  top: -1px; left: -1px;
+  border-top: 2px solid var(--lime);
+  border-left: 2px solid var(--lime);
+}
+
+.manifesto::after {
+  bottom: -1px; right: -1px;
+  border-bottom: 2px solid var(--lime);
+  border-right: 2px solid var(--lime);
+}
+
+.manifesto .quote {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #fafaf7;
+  margin-bottom: 14px;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.manifesto .quote .hl {
+  color: #c8ff3d;
+}
+
+.manifesto .attribution {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(250, 250, 247, 0.7);
+}
+
+/* === FOOTER === */
+footer {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule-strong);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+
+footer .col strong {
+  display: block;
+  color: var(--lime-deep);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+footer .col a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule-strong);
+}
+
+footer .col a:hover {
+  color: var(--lime-deep);
+  border-bottom-color: var(--lime);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .workflow { grid-template-columns: repeat(2, 1fr); }
+  .act .arrow { display: none; }
+  .usp-grid { grid-template-columns: repeat(2, 1fr); }
+  .elements-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 540px) {
+  body { padding: 24px 16px 40px; }
+  .workflow { grid-template-columns: 1fr; }
+  .usp-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { padding: 0; background: var(--bg) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { max-width: none; }
+  h2 { page-break-after: avoid; }
+  .section { page-break-inside: avoid; }
+  .act:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="brand-mark">498A · ZOOPA · INNOVATION LAB</div>
+  <h1 class="logo"><span class="leo">LEO</span></h1>
+  <div class="tagline">// <em>Agentic-first. World Wide friendly.</em></div>
+
+  <!-- HERO -->
+  <div class="hero-card">
+    <div class="label">// EL PRODUCTO</div>
+    <p>LEO es el primer generador de contenidos que combina <strong>agentic-first generation</strong>, <strong>proceso humano-céntrico</strong> y <strong>aislamiento multi-brand riguroso</strong>. Diseñamos cada pieza para que un agente de IA pueda citarla, un humano pueda disfrutarla, y un editor pueda producirla en serie sin perder el oficio.</p>
+  </div>
+
+  <!-- WORKFLOW -->
+  <div class="section">
+    <div class="section-label"><span class="num">01</span>El flujo en 6 actos</div>
+    <h2>De la <span class="accent">idea</span> a la <span class="accent">publicación</span>, acompañado.</h2>
+
+    <div class="workflow">
+      <div class="act">
+        <div class="roman">ACTO I</div>
+        <div class="icon">🦁</div>
+        <div class="name">Marca</div>
+        <div class="desc">Brand Sheet rica + Brand Health (Crías → León → Rey). GEOradar autoimport.</div>
+        <span class="arrow">→</span>
+      </div>
+      <div class="act">
+        <div class="roman">ACTO II</div>
+        <div class="icon">💡</div>
+        <div class="name">Idea</div>
+        <div class="desc">Inbox de temas + research automático (8 fuentes diarias). 3 ángulos sugeridos.</div>
+        <span class="arrow">→</span>
+      </div>
+      <div class="act">
+        <div class="roman">ACTO III</div>
+        <div class="icon">📐</div>
+        <div class="name">Plan</div>
+        <div class="desc">Medios + autores + calendar Gantt. El sistema propone, tú validas.</div>
+        <span class="arrow">→</span>
+      </div>
+      <div class="act">
+        <div class="roman">ACTO IV</div>
+        <div class="icon">✍️</div>
+        <div class="name">Canónico</div>
+        <div class="desc">Pieza pilar con validators inline + SAM opcional. Aprueba y captura voice.</div>
+        <span class="arrow">→</span>
+      </div>
+      <div class="act">
+        <div class="roman">ACTO V</div>
+        <div class="icon">📚</div>
+        <div class="name">Library</div>
+        <div class="desc">Batch generación + 4 vistas (temporal, deps, personas, insights).</div>
+        <span class="arrow">→</span>
+      </div>
+      <div class="act">
+        <div class="roman">ACTO VI</div>
+        <div class="icon">🚀</div>
+        <div class="name">Publicar</div>
+        <div class="desc">3 modos + Home Run. Placeholders resueltos en orden topológico.</div>
+      </div>
+    </div>
+    <div class="workflow-note">// Cada acto produce una micro-victoria visible. Cada cierre alimenta el siguiente proyecto vía VoiceExemplars.</div>
+  </div>
+
+  <!-- USPS -->
+  <div class="section">
+    <div class="section-label"><span class="num">02</span>Lo que hace diferente</div>
+    <h2>Cinco principios <span class="accent">constitutivos</span>.</h2>
+
+    <div class="usp-grid">
+      <div class="usp">
+        <div class="num">01</div>
+        <div class="title">Multi-brand foundational</div>
+        <div class="body">Aislamiento por marca <em>desde la base</em>: routing, API, ORM, Postgres RLS y storage. No es una feature — es la arquitectura.</div>
+      </div>
+      <div class="usp">
+        <div class="num">02</div>
+        <div class="title">Agentic-first generation</div>
+        <div class="body">JSON-LD, citable claims, entity index, glosario y FAQ <em>por defecto</em>. SEO sale como subproducto, no al revés.</div>
+      </div>
+      <div class="usp">
+        <div class="num">03</div>
+        <div class="title">Proceso, no formato</div>
+        <div class="body">La unidad organizativa es la <em>persona × funnel</em>, no el medio. El medio es derivada.</div>
+      </div>
+      <div class="usp">
+        <div class="num">04</div>
+        <div class="title">Assist-by-default</div>
+        <div class="body">La IA está activa en cada decisión. El opt-out es la excepción. Botón <em>Validar</em> en vez de configurar todo.</div>
+      </div>
+      <div class="usp">
+        <div class="num">05</div>
+        <div class="title">Aprendizaje per-brand</div>
+        <div class="body">Cada corrección del operador se guarda como VoiceExemplar y se inyecta en futuras generaciones de esa marca.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <div class="manifesto">
+    <div class="quote">"Diseñamos cada pieza para que un agente de IA pueda <span class="hl">citarla</span>, un humano pueda <span class="hl">disfrutarla</span>, y un editor pueda producirla en serie <span class="hl">sin perder el oficio</span>."</div>
+    <div class="attribution">— LEO MANIFESTO · ZOOPA / 498A · 2026</div>
+  </div>
+
+  <!-- KEY ELEMENTS -->
+  <div class="section">
+    <div class="section-label"><span class="num">03</span>Elementos clave</div>
+    <h2>20 features. <span class="accent">Todas full en v2.</span></h2>
+
+    <div class="elements-grid">
+      <div class="element">
+        <div class="icon">🐱→👑</div>
+        <div class="title">Brand Health Ratio</div>
+        <div class="body">Indicador felino (<code>Crías → Gato → León → Rey</code>) basado en 10 checks. Nudgea, nunca bloquea.</div>
+      </div>
+      <div class="element">
+        <div class="icon">📥</div>
+        <div class="title">Topic Discovery proactiva</div>
+        <div class="body">8 fuentes diarias: News API, Google Trends, RSS, YouTube, X, Reddit, white papers (arXiv/Semantic Scholar), GEOradar gaps.</div>
+      </div>
+      <div class="element">
+        <div class="icon">🔥📅🌳</div>
+        <div class="title">Heat × Lifespan</div>
+        <div class="body">Cada tema clasificado por urgencia (<code>al rojo vivo</code> / <code>en tendencia</code> / <code>establecido</code> / <code>bajo el radar</code>) y vida útil (<code>fugaz</code> / <code>medio plazo</code> / <code>evergreen</code>).</div>
+      </div>
+      <div class="element">
+        <div class="icon">🔍</div>
+        <div class="title">Research automático</div>
+        <div class="body">WebSearch + dedup contra library propia + flags legal/PR contra archivos de regulación EU + autoregulación de marca.</div>
+      </div>
+      <div class="element">
+        <div class="icon">🎯</div>
+        <div class="title">Planning visual</div>
+        <div class="body">3 sub-vistas: cards de medios con persona dominante + reach + fit score; autores con load indicator; calendar Gantt drag-drop.</div>
+      </div>
+      <div class="element">
+        <div class="icon">✓</div>
+        <div class="title">Canónico con validators inline</div>
+        <div class="body">Tiptap editor + scores en tiempo real (Smart Brevity, Semantic Density, Naturalness) + 8 componentes HTML obligatorios.</div>
+      </div>
+      <div class="element">
+        <div class="icon">★</div>
+        <div class="title">SAM integrado funcional</div>
+        <div class="body">Match contra prompts target de auditoría GEOradar + sugerencias clickables que reescriben el bloque con Claude.</div>
+      </div>
+      <div class="element">
+        <div class="icon">📊</div>
+        <div class="title">Library Overview · 4 vistas</div>
+        <div class="body">Temporal · Dependencies graph · Personas swimlanes · Insights distribution matrix. Edición directa en cualquier vista.</div>
+      </div>
+      <div class="element">
+        <div class="icon">🚀</div>
+        <div class="title">Home Run mode</div>
+        <div class="body">3 modos de publicación (auto API / Playwright / manual asistido) + sequential approval o cadena automática tras la primera.</div>
+      </div>
+      <div class="element">
+        <div class="icon">🎨</div>
+        <div class="title">Imagen con brand style</div>
+        <div class="body">Nano Banana + brand reference images → auto style prompt persistente. Coherencia visual cross-piece, cross-language.</div>
+      </div>
+      <div class="element">
+        <div class="icon">⟳</div>
+        <div class="title">Now working on</div>
+        <div class="body">Widget global persistente en top bar. Siempre sabes qué está procesando el sistema, ETA, y si puedes cancelar.</div>
+      </div>
+      <div class="element">
+        <div class="icon">📚</div>
+        <div class="title">VoiceExemplars</div>
+        <div class="body">5 categorías (tone, structure, vocabulary, rhythm, anti-pattern). Capture per brand. Inyectadas como few-shot en futuras generaciones.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BENEFITS -->
+  <div class="section">
+    <div class="section-label"><span class="num">04</span>Beneficios</div>
+    <h2>Tres beneficiarios, una <span class="accent">misma promesa</span>.</h2>
+
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="audience">PARA EL OPERADOR EDITORIAL</div>
+        <div class="punch">Conserva el oficio. Multiplica el output.</div>
+        <div class="body">El proceso mental ya no se traduce a un modelo de datos ajeno. <strong>El sistema acompaña, no reemplaza.</strong> Cada corrección queda capturada y mejora las siguientes piezas. Editor profesional, no operador de plantillas.</div>
+      </div>
+      <div class="benefit">
+        <div class="audience">PARA LA MARCA</div>
+        <div class="punch">Voz consistente. Visibilidad agéntica.</div>
+        <div class="body">VoiceExemplars y brand reference images garantizan <strong>coherencia cross-piece, cross-channel, cross-language</strong>. Cada pieza es citable por agentes IA desde día 1. SEO sale gratis; GEO se gana de fábrica.</div>
+      </div>
+      <div class="benefit">
+        <div class="audience">PARA LA AGENCIA</div>
+        <div class="punch">Escala sin contaminar marcas.</div>
+        <div class="body"><strong>Multi-brand isolation riguroso</strong> en 5 layers (routing, API, ORM, Postgres RLS, storage). Voice exemplars de un cliente nunca contaminan otro. RBAC granular: editores scoped a brands específicas.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPETITORS -->
+  <div class="section">
+    <div class="section-label"><span class="num">05</span>Frente al mercado</div>
+    <h2>Nadie hace todo. <span class="accent">LEO sí.</span></h2>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Herramienta</th>
+          <th>Agentic-first</th>
+          <th>Process-driven</th>
+          <th>Multi-brand isolation</th>
+          <th>Learning loop</th>
+          <th>Ventaja LEO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="leo">
+          <td>LEO</td>
+          <td><span class="tick">✓</span></td>
+          <td><span class="tick">✓</span></td>
+          <td><span class="tick">✓</span></td>
+          <td><span class="tick">✓</span></td>
+          <td class="adv">— la propuesta —</td>
+        </tr>
+        <tr>
+          <td>Buffer / Hootsuite</td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">Scheduling, no generation</td>
+        </tr>
+        <tr>
+          <td>ContentStudio</td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">Repurpose, no incremental info</td>
+        </tr>
+        <tr>
+          <td>Jasper / Copy.ai</td>
+          <td><span class="partial">~</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">AI text gen, no editorial process</td>
+        </tr>
+        <tr>
+          <td>ChatGPT + workflow manual</td>
+          <td><span class="partial">~</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">Chat, no sistema</td>
+        </tr>
+        <tr>
+          <td>Content Factory CLI (predecesor)</td>
+          <td><span class="tick">✓</span></td>
+          <td><span class="partial">~</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">Zoopa-only, sin UI, sin learning</td>
+        </tr>
+        <tr>
+          <td>Notion AI / Coda AI</td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">Doc-centric, no publication</td>
+        </tr>
+        <tr>
+          <td>Anyword / Writesonic</td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td><span class="cross">×</span></td>
+          <td class="adv">SEO-first, ceguera agéntica</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="col">
+      <strong>// LEO</strong>
+      Agentic-first content factory.<br>
+      Multi-brand foundational.<br>
+      A 498A R&amp;D × ZOOPA product.
+    </div>
+    <div class="col">
+      <strong>// CONTEXT</strong>
+      PRD v2.0 Greenfield · 2026-05-23<br>
+      Status: spec ready for Figma phase<br>
+      Timeline: 20–26 weeks (UX-first)
+    </div>
+    <div class="col">
+      <strong>// CONTACT</strong>
+      carlos.ortet@zoopa.es<br>
+      <a href="https://georadar.app">georadar.app</a> · <a href="https://sam.georadar.app">sam.georadar.app</a><br>
+      <a href="https://498as.com">498as.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
