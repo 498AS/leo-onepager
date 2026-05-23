@@ -307,6 +307,97 @@ h2 .accent {
   font-weight: 500;
 }
 
+/* === TRANSMEDIA SECTION === */
+.transmedia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 8px;
+}
+.transmedia-viz {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.transmedia-viz svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.transmedia-copy p {
+  margin-bottom: 16px;
+  font-family: 'Hepta Slab', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.transmedia-copy p:last-child { margin-bottom: 0; }
+.transmedia-copy strong {
+  color: var(--lime-deep);
+  font-weight: 700;
+}
+.transmedia-copy em {
+  font-style: italic;
+  background: linear-gradient(180deg, transparent 62%, var(--lime-bg) 62%);
+  padding: 0 4px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.transmedia-punch {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+  margin-top: 24px;
+  line-height: 1.1;
+}
+.transmedia-punch strong {
+  color: var(--lime);
+  font-weight: 400;
+}
+
+/* === ITERATION BANNER (Acto VII conceptual) === */
+.iteration-banner {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 22px 32px;
+  background: var(--lime-bg);
+  border: 1px solid var(--lime);
+  border-left: 4px solid var(--lime);
+}
+.iteration-icon {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  color: var(--lime-deep);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+.iteration-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--lime-deep);
+  margin-bottom: 8px;
+}
+.iteration-body {
+  font-family: 'Hepta Slab', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.iteration-body em {
+  color: var(--lime-deep);
+  font-style: italic;
+  font-weight: 600;
+}
+
 /* === KEY ELEMENTS === */
 .elements-grid {
   display: grid;
@@ -582,6 +673,9 @@ footer .col a:hover {
   .workflow { grid-template-columns: repeat(2, 1fr); }
   .act .arrow { display: none; }
   .usp-grid { grid-template-columns: repeat(2, 1fr); }
+  .transmedia-grid { grid-template-columns: 1fr; gap: 24px; }
+  .iteration-banner { grid-template-columns: 1fr; text-align: left; padding: 18px 22px; }
+  .iteration-icon { font-size: 44px; }
   .elements-grid { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   footer { grid-template-columns: 1fr; }
@@ -665,6 +759,14 @@ footer .col a:hover {
       </div>
     </div>
     <div class="workflow-note">// Cada acto produce una micro-victoria visible. Cada cierre alimenta el siguiente proyecto vía VoiceExemplars.</div>
+
+    <div class="iteration-banner">
+      <div class="iteration-icon">↻</div>
+      <div class="iteration-content">
+        <div class="iteration-title">ACTO VII · APRENDE &amp; REPITE</div>
+        <div class="iteration-body">El ciclo se cierra y vuelve a empezar, más fuerte. Cada proyecto deja <em>voice exemplars + library titles + persona coverage</em> que alimentan la siguiente iteración. La identidad transmedia se consolida pieza a pieza, proyecto a proyecto.</div>
+      </div>
+    </div>
   </div>
 
   <!-- USPS -->
@@ -702,6 +804,58 @@ footer .col a:hover {
         <div class="num">06</div>
         <div class="title">Aprendizaje per-brand</div>
         <div class="body">Cada corrección del operador se guarda como VoiceExemplar y se inyecta en futuras generaciones de esa marca.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSMEDIA SECTION -->
+  <div class="section">
+    <div class="section-label">El continuum transmedia</div>
+    <h2>Una marca son sus <span class="accent">piezas</span> — y <span class="accent">cómo se hablan</span> entre ellas.</h2>
+
+    <div class="transmedia-grid">
+      <div class="transmedia-viz">
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Red transmedia: marca al centro conectada con 6 touchpoints">
+          <g stroke="#c8c4b5" stroke-width="1.2" fill="none">
+            <line x1="300" y1="190" x2="300" y2="45" />
+            <line x1="300" y1="190" x2="426" y2="118" />
+            <line x1="300" y1="190" x2="426" y2="263" />
+            <line x1="300" y1="190" x2="300" y2="335" />
+            <line x1="300" y1="190" x2="174" y2="263" />
+            <line x1="300" y1="190" x2="174" y2="118" />
+          </g>
+          <g stroke="#5a9a14" stroke-width="1.5" stroke-dasharray="5,4" fill="none" opacity="0.7">
+            <path d="M 174 118 Q 240 70 300 45" />
+            <path d="M 300 45 Q 360 70 426 118" />
+            <path d="M 426 118 Q 470 190 426 263" />
+            <path d="M 426 263 Q 360 310 300 335" />
+            <path d="M 300 335 Q 240 310 174 263" />
+            <path d="M 174 263 Q 130 190 174 118" />
+          </g>
+          <g text-anchor="middle">
+            <circle cx="300" cy="45" r="32" fill="#ffffff" stroke="#5e5e5e" stroke-width="1.2"/>
+            <text x="300" y="51" font-family="'Bebas Neue', sans-serif" font-size="14" fill="#1a1a1a" letter-spacing="0.06em">BLOG</text>
+            <circle cx="426" cy="118" r="32" fill="#ffffff" stroke="#5e5e5e" stroke-width="1.2"/>
+            <text x="426" y="124" font-family="'Bebas Neue', sans-serif" font-size="12" fill="#1a1a1a" letter-spacing="0.06em">LINKEDIN</text>
+            <circle cx="426" cy="263" r="32" fill="#ffffff" stroke="#5e5e5e" stroke-width="1.2"/>
+            <text x="426" y="269" font-family="'Bebas Neue', sans-serif" font-size="12" fill="#1a1a1a" letter-spacing="0.06em">SUBSTACK</text>
+            <circle cx="300" cy="335" r="32" fill="#ffffff" stroke="#5e5e5e" stroke-width="1.2"/>
+            <text x="300" y="341" font-family="'Bebas Neue', sans-serif" font-size="14" fill="#1a1a1a" letter-spacing="0.06em">MEDIUM</text>
+            <circle cx="174" cy="263" r="32" fill="#ffffff" stroke="#5e5e5e" stroke-width="1.2"/>
+            <text x="174" y="269" font-family="'Bebas Neue', sans-serif" font-size="14" fill="#1a1a1a" letter-spacing="0.06em">REDDIT</text>
+            <circle cx="174" cy="118" r="32" fill="#ffffff" stroke="#5e5e5e" stroke-width="1.2"/>
+            <text x="174" y="124" font-family="'Bebas Neue', sans-serif" font-size="11" fill="#1a1a1a" letter-spacing="0.06em">X · THREADS</text>
+          </g>
+          <circle cx="300" cy="190" r="54" fill="#f0f7e1" stroke="#5a9a14" stroke-width="2.5"/>
+          <text x="300" y="186" font-family="'Bebas Neue', sans-serif" font-size="22" text-anchor="middle" fill="#3d6b0e" letter-spacing="0.04em">MARCA</text>
+          <text x="300" y="206" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" fill="#3d6b0e" letter-spacing="0.18em">∞ TOUCHPOINTS</text>
+        </svg>
+      </div>
+      <div class="transmedia-copy">
+        <p>El usuario no consume tu marca en una sola pieza. Lee el <strong>blog</strong>, ve un <strong>thread</strong>, recibe la <strong>newsletter</strong>, encuentra un <strong>comentario en Reddit</strong>, descubre un <strong>artículo en Medium</strong>.</p>
+        <p>Cada pieza tiene <strong>valor individual</strong>. <em>Juntas componen profundidad y autoridad de marca.</em></p>
+        <p>LEO orquesta esa coherencia <strong>desde el plan</strong> — no como retoque final. La distribución de insights, los backlinks, la voz, las imágenes: todo está diseñado para que cualquier touchpoint confirme lo mismo.</p>
+        <div class="transmedia-punch">Esta marca <strong>sabe</strong> de lo que habla.</div>
       </div>
     </div>
   </div>
@@ -794,7 +948,7 @@ footer .col a:hover {
       </div>
       <div class="benefit">
         <div class="audience">PARA LA MARCA</div>
-        <div class="punch">Voz consistente. Visibilidad agéntica.</div>
+        <div class="punch">Voz consistente. Identidad transmedia. Visibilidad agéntica.</div>
         <div class="body">VoiceExemplars y brand reference images garantizan <strong>coherencia cross-piece, cross-channel, cross-language</strong>. Cada pieza es citable por agentes IA desde día 1. SEO sale gratis; GEO se gana de fábrica.</div>
       </div>
       <div class="benefit">
